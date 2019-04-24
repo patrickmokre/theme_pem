@@ -4,7 +4,7 @@ library(ggplot2)
 library(gridExtra)
 library(dplyr)
 
-theme_pem <- function(base_size = 11,
+theme_pem <- function(base_size = 10,
                       base_family = "",
                       base_line_size = base_size / 170,
                       base_rect_size = base_size / 170){
