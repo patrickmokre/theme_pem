@@ -1,10 +1,13 @@
 library(ggplot2)
 library(gridExtra)
 library(dplyr)
+library(sysfonts)
 
 loadfonts_pem <- function(){
-  windowsFonts(Montserrat = windowsFont("Montserrat"))
-  windowsFonts(Esteban = windowsFont("Esteban"))
+  sysfonts::font_add_google("Montserrat", "Montserrat")
+  sysfonts::font_add_google("Esteban", "Esteban")
+  #windowsFonts(Montserrat = windowsFont("Montserrat"))
+  #windowsFonts(Esteban = windowsFont("Esteban"))
 }
 
 theme_pem <- function(base_size = 10,
