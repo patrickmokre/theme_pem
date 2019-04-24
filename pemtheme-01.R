@@ -4,6 +4,11 @@ library(ggplot2)
 library(gridExtra)
 library(dplyr)
 
+loadfonts_pem <- function(){
+  windowsFonts(Montserrat = windowsFont("Montserrat"))
+  windowsFonts(Esteban = windowsFont("Esteban"))
+}
+
 theme_pem <- function(base_size = 10,
                       base_family = "",
                       base_line_size = base_size / 170,
