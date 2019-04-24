@@ -43,9 +43,13 @@ theme_pem <- function(base_size = 10,
                               margin = margin(), 
                               debug = FALSE),
           plot.background = element_rect(fill="#fff6f6",
-                                         color="#ffe6e6"),
+                                         color="#fff6f6"),
           panel.grid = element_line(color="#eeeeee",
-                                    size=1),   
+                                    size=1),
+          legend.background = element_rect(fill="#ffffff",
+                                           color="#fff6f6"),
+          legend.title = element_text(face="bold",
+                                      hjust=0.5),
       
       complete = FALSE
     )
