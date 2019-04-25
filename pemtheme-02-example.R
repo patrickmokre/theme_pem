@@ -7,6 +7,9 @@ require(devtools)
 
 source("https://raw.githubusercontent.com/patrickmokre/theme_pem/master/pemtheme-01.R")
 
+loadfonts_pem()
+showtext_auto()
+
 EuStockMarkets %>%
   melt() %>%
   rename(date=Var1,
