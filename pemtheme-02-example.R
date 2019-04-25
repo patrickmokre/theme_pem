@@ -8,7 +8,6 @@ require(devtools)
 source("https://raw.githubusercontent.com/patrickmokre/theme_pem/master/pemtheme-01.R")
 
 loadfonts_pem()
-showtext_auto()
 
 EuStockMarkets %>%
   melt() %>%
@@ -25,3 +24,19 @@ EuStockMarkets %>%
        y="",
        x="") +
   theme_pem()
+
+EuStockMarkets %>%
+  melt() %>%
+  rename(date=Var1,
+         Index=Var2) %>%
+  ggplot() +
+  geom_line(aes(x=date,
+                y=value,
+                col=Index,
+                group=Index)) +
+  labs(title = "EU Stock Markets",
+       subtitle = "Daily Closing Prices 1991-1998",
+       caption = "Data: RStudio. Plot: @patrickmokre",
+       y="",
+       x="") +
+  theme_pem_bw()
